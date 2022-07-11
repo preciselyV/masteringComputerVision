@@ -3,15 +3,15 @@ from torchvision import datasets
 from torchvision.transforms import ToTensor
 
 
-trainingData = datasets.FashionMNIST(
-    root = "./data",
+trainingData = datasets.CIFAR10(
+    root = "./data/CIFAR10",
     train = True,
     download=True,
     transform = ToTensor()
 )
-trainingData = datasets.FashionMNIST(
-    root = "./data",
-    train = True,
+testData = datasets.CIFAR10(
+    root = "./data/CIFAR10",
+    train = False,
     download=True,
     transform = ToTensor()
 )
